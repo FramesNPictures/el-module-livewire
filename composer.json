@@ -1,0 +1,22 @@
+{
+  "name": "framesnpictures/el-module-livewire",
+  "description": "Laravel Module Helper: Livewire",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "type": "library",
+  "authors": [
+    {
+      "name": "Chris Cynarski",
+      "email": "chris@framesnpictures.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "livewire/livewire": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fnp\\ElModule\\": "src/"
+    }
+  }
+}
