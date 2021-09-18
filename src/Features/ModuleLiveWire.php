@@ -1,12 +1,12 @@
 <?php
 
-namespace Fnp\ElModule\Features;
+namespace Fnp\ElModule\LiveWire\Features;
 
-use Fnp\ElModule\Models\LiveWireModel;
+use Fnp\ElModule\LiveWire\Models\LiveWireModel;
 use Illuminate\Support\Facades\Config;
 use Livewire\Livewire;
 
-trait ElModuleLiveWire
+trait ModuleLiveWire
 {
     abstract function defineLiveWire(LiveWireModel $liveWire);
 

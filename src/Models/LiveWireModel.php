@@ -1,6 +1,6 @@
 <?php
 
-namespace Fnp\ElModule\Models;
+namespace Fnp\ElModule\LiveWire\Models;
 
 class LiveWireModel
 {
