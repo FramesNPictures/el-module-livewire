@@ -10,7 +10,7 @@ trait ModuleLiveWire
 {
     abstract function defineLiveWire(LiveWireModel $liveWire);
 
-    public function bootElModuleLiveWireFeature()
+    public function bootModuleLiveWireFeature()
     {
         $model = new LiveWireModel();
         $this->defineLiveWire($model);
