@@ -3,15 +3,21 @@
 namespace Fnp\ElModule\LiveWire\Features;
 
 use Fnp\ElModule\LiveWire\Models\LiveWireModel;
+use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Facades\Config;
 use Livewire\Livewire;
 
 trait ModuleLiveWire
 {
-    abstract function defineLiveWire(LiveWireModel $liveWire);
+    abstract public function defineLiveWire(LiveWireModel $liveWire);
 
-    public function bootModuleLiveWireFeature()
+    public function bootModuleLiveWireFeature(Application $application)
     {
+        // Don't bother registering LiveWire if running in console.
+        if ($application->runningInConsole()) {
+            return;
+        }
+
         $model = new LiveWireModel();
         $this->defineLiveWire($model);
 
